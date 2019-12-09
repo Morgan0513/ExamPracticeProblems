@@ -201,10 +201,10 @@ namespace ExamPracticeProblem1
             {
                 var response = client.GetAsync(@"http://pcbstuou.w27.wh-2.com/webservices/3033/api/Movies?number=100").Result;
                 var content = response.Content.ReadAsStringAsync().Result;
-                movies = JsonConvert.DeserializeObject<List<Movie>>(content);
+                movies = JsonConvert.DeserializeObject<List<Movie>>(content); 
             }
 
-            return movies;
+            return movies; //might need to manually add
         }
 
         //clears all data afterwards
